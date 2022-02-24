@@ -1,0 +1,484 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Black.woff2") format("woff2"),
+    url("../fonts/Poppins-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"),
+    url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"),
+    url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.fluid {
+  /* max-width: 1400px !important; */
+  padding: 0 50px !important;
+  /* background: #34495e; */
+}
+
+.container-middle{
+  padding: 0 120px !important;
+}
+
+.button-all {
+  width: 335px;
+  height: 75px;
+}
+.button-all:hover {
+  opacity: 0.7;
+}
+
+nav {
+  display: flex;
+  align-items: center !important;
+  height: 120px;
+  width: 100%;
+  padding: 0 !important;
+}
+.navbar-sticky {
+  position: fixed;
+  z-index: 12355;
+  background: white;
+}
+label.logo {
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  line-height: 80px;
+  margin-left: 15px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  /* border: 1px solid transparent; */
+  padding: 7px 10px;
+  /* border-radius: 3px; */
+}
+a:hover {
+  /* border: 1px solid white; */
+  transform: 0.5s;
+  text-decoration: none !important;
+  color: red !important;
+}
+nav #icon {
+  height: 30px;
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  display: none;
+  color: white;
+  font-size: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu span {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  /* margin-left: 62px; */
+  background: black;
+}
+.menu input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu span:nth-child(2) {
+  transform: translateY(-10px);
+}
+.menu span:nth-child(5) {
+  transform: translateY(10px);
+}
+.menu input:checked ~ span:nth-child(2) {
+  opacity: 0;
+}
+.menu input:checked ~ span:nth-child(5) {
+  opacity: 0;
+}
+.menu span:nth-child(3) {
+  transform: rotate(0);
+  transition: all 0.4s;
+}
+.menu span:nth-child(4) {
+  transform: rotate(0);
+  transition: all 0.4s;
+}
+.menu input:checked ~ span:nth-child(3) {
+  transform: rotate(135deg);
+}
+.menu input:checked ~ span:nth-child(4) {
+  transform: rotate(-135deg);
+}
+
+.nav-input {
+  width: 160px;
+  height: 40px;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  background-color: #c3bfbc;
+}
+
+.fa-search {
+  display: inline-block;
+  position: absolute;
+  margin-top: -7px;
+  right: 50px;
+  font-size: 20px;
+}
+
+/* ====================================================================================================================== */
+
+.bg-fon1 {
+  max-width: 100%;
+  /* height: 100%; */
+  background: url(./img/bg-fon1.png) center;
+  background-size: cover;
+  /* border: 1px solid #000; */
+}
+.Time-for-hiking {
+  font-size: 87px;
+  font-weight: 700;
+  color: #deb37e;
+  padding-right: 240px;
+  text-shadow: 5px 0px 15px #deb37e;
+}
+.Lorem-title-section1 {
+  letter-spacing: 4px;
+}
+.button-time {
+  border-radius: 20px !important;
+  font-size: 23px !important;
+  text-transform: uppercase;
+}
+.Lorem-text-section1 {
+  font-size: 17.5px;
+}
+
+/* ============================================================================================================================= */
+
+.lets-go {
+  font-size: 55px;
+  /* font-weight: 700; */
+  color: #e2a355;
+}
+.Lorem-text-section2 {
+  font-size: 25px;
+  color: #7f7770;
+  line-height: 30px;
+}
+
+.card {
+  /* width: 27%; */
+  width: 22rem;
+  background: #7f7770 !important;
+  border-radius: 0 !important;
+  padding-bottom: 40px;
+}
+.card-image {
+  overflow: hidden;
+  height: 300px;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 0 !important;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover img {
+  transform: scale(1.4);
+}
+.card-text {
+  font-size: 22px;
+  color: #e2e2e2;
+}
+#changeButton {
+  background: #7f7770 !important;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 22px;
+  border-radius: 40px;
+  box-shadow: none;
+}
+
+.shadow-left {
+  position: absolute !important;
+  left: 0;
+  top: 1540px;
+  z-index: -1;
+}
+#shadow-right {
+  position: absolute !important;
+  right: 0;
+  top: 2630px;
+  z-index: -1;
+}
+
+/* ============================================================================================================= */
+.bigCard {
+  background: #7f7770;
+  padding-right: 175px !important;
+}
+.bigCard-title {
+  font-size: 55px;
+}
+.bigCard-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+}
+.bigCard-button {
+  box-shadow: none !important;
+  font-size: 27px !important;
+  background: #e2a355 !important;
+  color: white !important;
+  letter-spacing: 7px;
+  border-radius: 40px !important;
+}
+
+/* ============================================================================================================= */
+
+.bigCard-2 {
+  background: #deb37e;
+}
+
+/* ============================================================================================================= */
+
+.bg-fon2 {
+  background: #99928d;
+}
+.bg-fon3 {
+  width: 100%;
+  height: 100vh;
+  background: url(./img/bg-fon2.png) no-repeat;
+  background-size: 100%;
+}
+
+
+/* ================================================================================================= */
+
+.hiking-Shape{
+  margin-top: -80px;
+  z-index: 10;
+}
+.hiking-card{
+  padding: 150px 0 190px 0 !important;
+}
+.hiking-card h1{
+  font-size: 55px;
+}
+.hiking-card p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 100 !important;
+}
+
+.hiking-shadow{
+  margin-top: -50px;
+}
+
+
+/* =================================================================================================== */
+
+.bg-fon2{
+  width: 100%;
+  height: 100%;
+  background: url(./img/bg-fon2.png) no-repeat;
+  background-size: cover;
+}
+.Card-ShapeBottom{
+  z-index: 1000; 
+  margin-top: -40px;
+}
+/* .explore{
+  padding: 400px 100px 350px 0px !important;
+} */
+.explore h1{
+  font-size: 65px;
+  font-weight: 900;
+}
+.explore h1:nth-child(1){
+  color: #deb37e;
+}
+.explore h1:nth-child(2){
+  color: #54524f;
+}
+.Card3-ShapeBottom{
+  margin-top: -40px;
+  height: 200px !important;
+}
+
+/* ========================================================================================== */
+
+.lorem-tree{
+  padding-top: 170px;
+}
+.lorem-tree h2{
+  color: #deb37e;
+  font-weight: 600 !important;
+  padding-bottom: 10px;
+}
+.lorem-tree p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.glide{
+  z-index: 2;
+}
+
+.glide__slide{
+  filter: blur(6px);
+  opacity: .7;
+  transition: .3s linear;
+}
+
+.glide__slide--active{
+  opacity: 1;
+  filter: none;
+  transform: scale(1.1);
+}
+
+.glide__slides{
+  overflow: visible;
+}
+
+.lorem-shadow{
+  right: 0;
+  z-index: 1;
+  font-style: inherit;
+}
+
+
+
+/* ========================================================================================= */
+
+
+
+.title-hero{
+  background: #deb37e; 
+  z-index: 1550;
+  padding: 160px 0;
+}
+.title-hero h1{
+  font-size: 55px;
+}
+.title-hero p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 100 !important;
+}
+.Your-Email input{
+  width: 90%;
+  padding: 15px 30px;
+  border-radius: 35px;
+  border: 0;
+  outline: none;
+  font-size: 20px;
+}
+.Your-Email button{
+  margin-left: -150px;
+  margin-top: -5px;
+  padding: 14px 30px;
+  border-radius: 35px;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
